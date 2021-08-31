@@ -13,6 +13,7 @@ namespace WpfDbApp
         {
             InitializeComponent();
 
+            userGrid.IsReadOnly = true;
             userGrid.AutoGenerateColumns = true;
             db = new Context();
             db.Users.Load();
