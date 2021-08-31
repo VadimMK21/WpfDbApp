@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Windows;
 
 namespace WpfDbApp
 {
@@ -7,9 +8,15 @@ namespace WpfDbApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        Context db;
         public MainWindow()
         {
             InitializeComponent();
+
+            userGrid.AutoGenerateColumns = true;
+            db = new Context();
+            db.Users.Load();
+            userGrid.ItemsSource = db.Users.Local.ToBindingList();
         }
     }
 }

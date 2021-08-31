@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <DataGrid x:Name="userGrid" ItemsSource="{Binding }" Margin="10,10,10,10"/>
 
     </Grid>
 </Window>
