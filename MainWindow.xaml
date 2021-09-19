@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDbApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="456" Width="800">
+        Title="MainWindow" Height="456" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,0">
-        <DataGrid x:Name="userGrid" Margin="10,10,10,10" FontSize="16" FontWeight="Bold" AutoGenerateColumns="False" SelectionChanged="userGrid_SelectionChanged">
+        <DataGrid x:Name="userGrid" Margin="10,10,10,10" FontSize="16" FontWeight="Bold" AutoGenerateColumns="False" MouseDoubleClick="userGrid_MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="30"/>
                 <DataGridTextColumn Binding="{Binding Path=name}" Header="Ім'я" Width="3*"/>

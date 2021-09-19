@@ -23,23 +23,14 @@ namespace WpfDbApp
             userGrid.ItemsSource = db.Users.Local.ToBindingList();
         }
 
-        private void userGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-            User user = userGrid.SelectedItem as User;
+        //SelectionChanged="userGrid_SelectionChanged"
 
-            View view = new View(new User
-            {
-                id = user.id,
-                name = user.name,
-                adress = user.adress,
-                phone = user.phone,
-                
-            });
 
-            view.ShowDialog();
-                       
+        //private void userGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
+        //  
             //User dr = userGrid.SelectedItem as User;
 
             //if (dr.name != null)
@@ -49,9 +40,22 @@ namespace WpfDbApp
             //    //MessageBox.Show(dg.Items.IndexOf(dg.SelectedItem).ToString());            
             //}
 
+        //}
 
+        private void userGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            User user = userGrid.SelectedItem as User;
 
+            View view = new View(new User
+            {
+                id = user.id,
+                name = user.name,
+                adress = user.adress,
+                phone = user.phone,
 
+            });
+
+            view.ShowDialog();
         }
         //private void btn_Del_Click(object sender, RoutedEventArgs e)
         //{
