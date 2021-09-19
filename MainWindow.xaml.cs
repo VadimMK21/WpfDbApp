@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Windows;
+using System.Windows.Input;
 
 namespace WpfDbApp
 {
@@ -14,10 +15,10 @@ namespace WpfDbApp
             InitializeComponent();
 
             userGrid.IsReadOnly = true;
-            userGrid.AutoGenerateColumns = true;
+
             db = new Context();
             db.Users.Load();
             userGrid.ItemsSource = db.Users.Local.ToBindingList();
-        }
+        }        
     }
 }
