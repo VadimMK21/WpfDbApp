@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfDbApp.View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDbApp"
+        mc:Ignorable="d"
+        Title="View" Height="130" Width="391">
+    <Grid Margin="0,0,0,6">
+        <TextBox x:Name="tb_name" Text="{Binding Path=name}" HorizontalAlignment="Left" Margin="38,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"/>
+        <TextBox Text="{Binding Path=adress}" HorizontalAlignment="Left" Margin="38,69,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox Text="{Binding Path=phone}" HorizontalAlignment="Left" Margin="212,69,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
+    </Grid>
+</Window>
