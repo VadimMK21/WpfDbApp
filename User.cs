@@ -1,8 +1,6 @@
-﻿
-
-namespace WpfDbApp
+﻿namespace WpfDbApp
 {
-    class User
+    public class User
     {
         public int id { get; set; }
         public string name { get; set; }
